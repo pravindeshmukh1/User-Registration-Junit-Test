@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UserRegistrationTest {
+    //First Name Testcase
     @Test
     public void whenGivenFirstName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkFirstName("Pravin"));
@@ -24,7 +25,7 @@ public class UserRegistrationTest {
     public void whenGivenFirstName_withThreeOrMoreCharacter_and_numberOrSpecialCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkFirstName("Pravin1@"));
     }
-
+    //Last Name TestCase
     @Test
     public void whenGivenLastName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkLastName("Deshmukh"));
@@ -44,12 +45,12 @@ public class UserRegistrationTest {
     public void whenGivenLastName_withThreeOrMoreCharacter_numberOrSpecialCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkLastName("deshmukh@"));
     }
-
+    //Email Testcase
     @Test
     public void whenGivenEmailAddress_withValidFormat_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkEmailAddress("pravin1desh@gmail.com"));
     }
-
+    //Mobile Number Testcase
     @Test
     public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_tenDigitNumber_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkMobileNumber("91 9029152162"));
@@ -69,9 +70,10 @@ public class UserRegistrationTest {
     public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_notExactTenDigitNumber_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkMobileNumber("91 90291521620"));
     }
-
+    //Password TestCase
     @Test
     public void whenGivenPassword__withAtLeastEightCharacter_shouldReturnTrue(){
         Assert.assertTrue(UserRegistration.checkPassword("Admin@12356"));
     }
+    
 }
