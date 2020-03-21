@@ -73,7 +73,11 @@ public class UserRegistrationTest {
     //Password TestCase
     @Test
     public void whenGivenPassword__withAtLeastEightCharacter_shouldReturnTrue(){
-        Assert.assertTrue(UserRegistration.checkPassword("Admin@12356"));
+        Assert.assertTrue(UserRegistration.checkPassword("admin1234"));
+    }
+    @Test
+    public void whenGivenPassword__withAtLeastEightCharacter_shouldReturnFalse(){
+        Assert.assertFalse(UserRegistration.checkPassword("admin"));
     }
     
 }

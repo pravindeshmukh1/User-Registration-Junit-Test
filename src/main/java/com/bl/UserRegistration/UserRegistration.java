@@ -7,6 +7,7 @@ public class UserRegistration {
     private static final String MOBILE_NUMBER_PATTERN = "^[0-9]{2,3}[ ][0-9]{10}$";
     private static final String PASSWORD = "^([a-zA-Z0-9@*#]{8,15})$";
 
+
     public static boolean checkFirstName(String firstName) {
         return firstName.matches(FIRST_NAME_PATTERN);
     }
