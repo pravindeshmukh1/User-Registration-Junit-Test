@@ -1,4 +1,4 @@
-package com.bl.userjegistrationjunit;
+package com.bl.userregistrationjunit;
 
 import com.bl.UserRegistration.UserRegistration;
 import org.junit.Assert;
@@ -46,12 +46,12 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void whenGivenEmailAddress_withValidFormat_ShouldReturnTrue() {
+    public void whenGivenEmailAddress_withValidFormat_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkEmailAddress("pravin1desh@gmail.com"));
     }
 
     @Test
-    public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_tenDigitNumber_ShouldReturnTrue() {
+    public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_tenDigitNumber_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkMobileNumber("91 9029152162"));
     }
 
