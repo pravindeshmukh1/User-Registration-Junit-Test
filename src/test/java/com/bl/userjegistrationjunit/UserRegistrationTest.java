@@ -25,4 +25,24 @@ public class UserRegistrationTest {
         Assert.assertFalse(UserRegistration.checkFirstName("Pravin1@"));
     }
 
+    @Test
+    public void whenGivenLastName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
+        Assert.assertTrue(UserRegistration.checkLastName("Deshmukh"));
+    }
+
+    @Test
+    public void whenGivenLastName_lessThenThreeCharacter_shouldReturnFalse() {
+        Assert.assertFalse(UserRegistration.checkLastName("De"));
+    }
+
+    @Test
+    public void whenGivenLastName_onlyLowerCaseCharacter_shouldReturnFalse() {
+        Assert.assertFalse(UserRegistration.checkLastName("deshmukh"));
+    }
+
+    @Test
+    public void whenGivenLastName_withThreeOrMoreCharacter_numberOrSpecialCharacter_shouldReturnFalse() {
+        Assert.assertFalse(UserRegistration.checkLastName("deshmukh@"));
+    }
+
 }
