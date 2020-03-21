@@ -91,10 +91,18 @@ public class UserRegistrationTest {
 
     @Test
     public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_AtLeastOneNumericNumber_shouldReturnTrue(){
-        Assert.assertTrue(UserRegistration.checkPassword("Admin123"));
+        Assert.assertTrue(UserRegistration.checkPassword("Admin1admin"));
     }
     @Test
     public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_withoutOneNumericNumber_shouldReturnFalse(){
         Assert.assertFalse(UserRegistration.checkPassword("Adminadmin"));
+    }
+    @Test
+    public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_OneNumericNumber_withSpecialSymbol_shouldReturnTrue(){
+        Assert.assertTrue(UserRegistration.checkPassword("Admin@1admin"));
+    }
+    @Test
+    public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_OneNumericNumber_withSpecialSymbol_shouldReturnFalse(){
+        Assert.assertFalse(UserRegistration.checkPassword("Admin1admin"));
     }
 }
