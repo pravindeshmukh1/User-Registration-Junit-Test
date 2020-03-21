@@ -90,7 +90,7 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_OneNumericNumber_shouldReturnTrue(){
+    public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_AtLeastOneNumericNumber_shouldReturnTrue(){
         Assert.assertTrue(UserRegistration.checkPassword("Admin123"));
     }
     @Test
