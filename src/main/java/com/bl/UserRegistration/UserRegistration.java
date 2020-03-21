@@ -8,6 +8,7 @@ public class UserRegistration {
     private static final String PASSWORD = "^.*(?=.{8,})(?=.*[A-Z]+)$";
 
 
+
     public static boolean checkFirstName(String firstName) {
         return firstName.matches(FIRST_NAME_PATTERN);
     }
