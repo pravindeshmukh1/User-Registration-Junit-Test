@@ -70,4 +70,8 @@ public class UserRegistrationTest {
         Assert.assertFalse(UserRegistration.checkMobileNumber("91 90291521620"));
     }
 
+    @Test
+    public void whenGivenPassword__withAtLeastEightCharacter_shouldReturnTrue(){
+        Assert.assertTrue(UserRegistration.checkPassword("Admin@12356"));
+    }
 }
