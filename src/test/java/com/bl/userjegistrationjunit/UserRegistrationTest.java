@@ -49,4 +49,25 @@ public class UserRegistrationTest {
     public void whenGivenEmailAddress_withValidFormat_ShouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkEmailAddress("pravin1desh@gmail.com"));
     }
+
+    @Test
+    public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_tenDigitNumber_ShouldReturnTrue() {
+        Assert.assertTrue(UserRegistration.checkMobileNumber("91 9029152162"));
+    }
+
+    @Test
+    public void whenGivenMobileNumber_withOutCountryCode_tenDigitNumber_shouldReturnFalse() {
+        Assert.assertFalse(UserRegistration.checkMobileNumber("9029152162"));
+    }
+
+    @Test
+    public void whenGivenMobileNumber_withCountryCode_notFollowedBySpace_tenDigitNumber_shouldReturnFalse() {
+        Assert.assertFalse(UserRegistration.checkMobileNumber("919029152162"));
+    }
+
+    @Test
+    public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_notExactTenDigitNumber_shouldReturnFalse() {
+        Assert.assertFalse(UserRegistration.checkMobileNumber("91 90291521620"));
+    }
+
 }
