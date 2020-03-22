@@ -1,4 +1,4 @@
-package com.bl.UserRegistration;
+package com.bl.userregistration;
 
 public class UserRegistration {
     private static final String FIRST_NAME_PATTERN = "^[A-Z][a-z]{2,}$";

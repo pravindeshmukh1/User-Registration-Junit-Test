@@ -1,10 +1,9 @@
 package com.bl.userregistrationjunit;
 
 
-import com.bl.UserRegistration.UserRegistration;
+import com.bl.userregistration.UserRegistration;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.experimental.theories.ParametersSuppliedBy;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import java.util.Arrays;
