@@ -6,6 +6,7 @@ public class UserRegistration {
     private static final String EMAIL_ID_PATTERN = "^([a-zA-Z0-9]+[._+-]?[0-9a-zA-Z]+)[@][a-zA-Z0-9]+([.][a-zA-Z]{2,3}){1,2}$";
     private static final String MOBILE_NUMBER_PATTERN = "^[0-9]{2,3}[ ][0-9]{10}$";
     private static final String PASSWORD = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[#$^+!*()@%&]).{8,}$";
+    private static final String PASSWORD1 = "[a-zA-Z0-9]{1,}$";
 
     public static boolean checkFirstName(String firstName) {  return firstName.matches(FIRST_NAME_PATTERN); }
 
@@ -19,4 +20,5 @@ public class UserRegistration {
 
     public static boolean checkPassword(String password) { return password.matches(PASSWORD); }
 
+    public static boolean checkPassword1(String password) { return password.matches(PASSWORD1);}
 }

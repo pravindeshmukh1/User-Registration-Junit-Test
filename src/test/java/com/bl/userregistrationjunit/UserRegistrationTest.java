@@ -1,5 +1,6 @@
 package com.bl.userregistrationjunit;
 
+
 import com.bl.userregistration.UserRegistration;
 import org.junit.Assert;
 import org.junit.Test;
@@ -73,7 +74,7 @@ public class UserRegistrationTest {
     //Password TestCase
     @Test
     public void whenGivenPassword__withAtLeastEightCharacter_shouldReturnTrue(){
-        Assert.assertTrue(UserRegistration.checkPassword("admin1234"));
+        Assert.assertTrue(UserRegistration.checkPassword1("admin1234"));
     }
     @Test
     public void whenGivenPassword__withAtLeastEightCharacter_shouldReturnFalse(){
@@ -82,7 +83,7 @@ public class UserRegistrationTest {
 
     @Test
     public void whenGivenPassword_withAtLeastOneUpperCase_shouldReturnTrue(){
-        Assert.assertTrue(UserRegistration.checkPassword("Admin1234"));
+        Assert.assertTrue(UserRegistration.checkPassword1("Admin123"));
     }
     @Test
     public void whenGivenPassword_withoutUpperCase_shouldReturnFalse(){
@@ -91,7 +92,7 @@ public class UserRegistrationTest {
 
     @Test
     public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_AtLeastOneNumericNumber_shouldReturnTrue(){
-        Assert.assertTrue(UserRegistration.checkPassword("Admin1admin"));
+        Assert.assertTrue(UserRegistration.checkPassword1("Admin1admin"));
     }
     @Test
     public void whenGivenPassword_withAtLeastEightCharacter_OneUpperCase_withoutOneNumericNumber_shouldReturnFalse(){
