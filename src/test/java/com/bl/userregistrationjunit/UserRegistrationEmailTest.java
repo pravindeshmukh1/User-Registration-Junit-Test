@@ -91,7 +91,7 @@ public class UserRegistrationEmailTest {
         });
     }
     @Test
-    public void whenGivenEmail_shouldReturn_validOrNot() {
+    public void givenEmailId_shouldReturn_validOrNot() {
         boolean result= UserRegistration.checkEmailAddress(emailId);
         Assert.assertEquals(result,expectResult);
     }
