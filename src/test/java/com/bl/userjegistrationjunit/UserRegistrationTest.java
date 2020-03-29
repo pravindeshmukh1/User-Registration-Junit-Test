@@ -6,42 +6,42 @@ import org.junit.Test;
 
 public class UserRegistrationTest {
     @Test
-    public void whenGivenFirstName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
+    public void givenFirstName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkFirstName("Pravin"));
     }
 
     @Test
-    public void whenGivenFirstName_lessThenThreeCharacter_shouldReturnFalse() {
+    public void givenFirstName_withlessThenThreeCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkFirstName("pr"));
     }
 
     @Test
-    public void whenGivenFirstName_onlyLowerCaseCharacter_shouldReturnFalse() {
+    public void givenFirstName_withonlyLowerCaseCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkFirstName("pravin"));
     }
 
     @Test
-    public void whenGivenFirstName_withThreeOrMoreCharacter_and_numberOrSpecialCharacter_shouldReturnFalse() {
+    public void givenFirstName_withThreeOrMoreCharacter_and_numberOrSpecialCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkFirstName("Pravin1@"));
     }
 
     @Test
-    public void whenGivenLastName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
+    public void givenLastName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkLastName("Deshmukh"));
     }
 
     @Test
-    public void whenGivenLastName_lessThenThreeCharacter_shouldReturnFalse() {
+    public void givenLastName_withLessThenThreeCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkLastName("De"));
     }
 
     @Test
-    public void whenGivenLastName_onlyLowerCaseCharacter_shouldReturnFalse() {
+    public void givenLastName_withOnlyLowerCaseCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkLastName("deshmukh"));
     }
 
     @Test
-    public void whenGivenLastName_withThreeOrMoreCharacter_numberOrSpecialCharacter_shouldReturnFalse() {
+    public void givenLastName_withThreeOrMoreCharacter_numberOrSpecialCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkLastName("deshmukh@"));
     }
 
