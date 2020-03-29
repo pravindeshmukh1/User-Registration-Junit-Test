@@ -51,22 +51,22 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_tenDigitNumber_ShouldReturnTrue() {
+    public void givenMobileNumber_withCountryCode_FollowedBySpace_tenDigitNumber_ShouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkMobileNumber("91 9029152162"));
     }
 
     @Test
-    public void whenGivenMobileNumber_withOutCountryCode_tenDigitNumber_shouldReturnFalse() {
+    public void givenMobileNumber_withOutCountryCode_tenDigitNumber_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkMobileNumber("9029152162"));
     }
 
     @Test
-    public void whenGivenMobileNumber_withCountryCode_notFollowedBySpace_tenDigitNumber_shouldReturnFalse() {
+    public void givenMobileNumber_withCountryCode_notFollowedBySpace_tenDigitNumber_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkMobileNumber("919029152162"));
     }
 
     @Test
-    public void whenGivenMobileNumber_withCountryCode_FollowedBySpace_notExactTenDigitNumber_shouldReturnFalse() {
+    public void givenMobileNumber_withCountryCode_FollowedBySpace_notExactTenDigitNumber_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkMobileNumber("91 90291521620"));
     }
 
