@@ -8,12 +8,13 @@ public class UserRegistration {
     private static final String PASSWORD = "^(?=.*[A-Z]). {8,}$";
 
 
-
     public static boolean checkFirstName(String firstName) {
         return firstName.matches(FIRST_NAME_PATTERN);
     }
 
-    public static boolean checkLastName(String lastName) { return lastName.matches(LAST_NAME_PATTERN); }
+    public static boolean checkLastName(String lastName) {
+        return lastName.matches(LAST_NAME_PATTERN);
+    }
 
     public static boolean checkEmailAddress(String emailID) {
         return emailID.matches(EMAIL_ID_PATTERN);
@@ -26,5 +27,4 @@ public class UserRegistration {
     public static boolean checkPassword(String password) {
         return password.matches(PASSWORD);
     }
-
 }
