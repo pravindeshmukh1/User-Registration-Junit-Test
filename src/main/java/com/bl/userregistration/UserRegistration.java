@@ -7,14 +7,17 @@ public class UserRegistration {
     private static final String MOBILE_NUMBER_PATTERN = "^[0-9]{2,3}[ ][0-9]{10}$";
     private static final String PASSWORD = "^((?=[^@|#|&|%|*]*[@|&|#|%|*][^@|#|&|%|*]*$)(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9@#$%&*]{8,})$";
 
-
-    public static boolean checkFirstName(String firstName) {  return firstName.matches(FIRST_NAME_PATTERN); }
+    public static boolean checkFirstName(String firstName) {
+        return firstName.matches(FIRST_NAME_PATTERN);
+    }
 
     public static boolean checkLastName(String lastName) {
         return lastName.matches(LAST_NAME_PATTERN);
     }
 
-    public static boolean checkEmailAddress(String emailID) { return emailID.matches(EMAIL_ID_PATTERN); }
+    public static boolean checkEmailAddress(String emailID) {
+        return emailID.matches(EMAIL_ID_PATTERN);
+    }
 
     public static boolean checkMobileNumber(String mobileNumber) {
         return mobileNumber.matches(MOBILE_NUMBER_PATTERN);

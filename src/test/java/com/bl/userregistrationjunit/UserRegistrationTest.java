@@ -25,6 +25,7 @@ public class UserRegistrationTest {
     public void givenFirstName_withThreeOrMoreCharacter_and_numberOrSpecialCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkFirstName("Pravin1@"));
     }
+
     //Last Name TestCase
     @Test
     public void givenLastName_withThreeOrMoreCharacter_and_firstCharacterCapital_shouldReturnTrue() {
@@ -45,11 +46,13 @@ public class UserRegistrationTest {
     public void givenLastName_withThreeOrMoreCharacter_numberOrSpecialCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkLastName("deshmukh@"));
     }
+
     //Email Testcase
     @Test
     public void givenEmailAddress_withValidFormat_ShouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkEmailAddress("pravin1desh@gmail.com"));
     }
+
     //Mobile Number Testcase
     @Test
     public void givenMobileNumber_withCountryCode_FollowedBySpace_tenDigitNumber_ShouldReturnTrue() {
@@ -70,37 +73,45 @@ public class UserRegistrationTest {
     public void givenMobileNumber_withCountryCode_FollowedBySpace_notExactTenDigitNumber_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkMobileNumber("91 90291521620"));
     }
+
     //Password TestCase
     @Test
-    public void givenPassword__withAtLeastEightCharacter_shouldReturnTrue(){
+    public void givenPassword__withAtLeastEightCharacter_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkPassword("admin@1234"));
     }
+
     @Test
-    public void givenPassword__withAtLeastEightCharacter_shouldReturnFalse(){
+    public void givenPassword__withAtLeastEightCharacter_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkPassword("admin"));
     }
+
     @Test
-    public void givenPassword_withAtLeastOneUpperCase_shouldReturnTrue(){
+    public void givenPassword_withAtLeastOneUpperCase_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkPassword("Admin1234"));
     }
+
     @Test
-    public void givenPassword_withoutUpperCase_shouldReturnFalse(){
+    public void givenPassword_withoutUpperCase_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkPassword("admin1234"));
     }
+
     @Test
-    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_AtLeastOneNumericNumber_shouldReturnTrue(){
+    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_AtLeastOneNumericNumber_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkPassword("Admin123"));
     }
+
     @Test
-    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_withoutOneNumericNumber_shouldReturnFalse(){
+    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_withoutOneNumericNumber_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkPassword("Adminadmin"));
     }
+
     @Test
-    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_OneNumericNumber_withSpecialSymbol_shouldReturnTrue(){
+    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_OneNumericNumber_withSpecialSymbol_shouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkPassword("Admin@1admin"));
     }
+
     @Test
-    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_OneNumericNumber_withOutSpecialSymbol_shouldReturnFalse(){
+    public void givenPassword_withAtLeastEightCharacter_OneUpperCase_OneNumericNumber_withOutSpecialSymbol_shouldReturnFalse() {
         Assert.assertFalse(UserRegistration.checkPassword("Admin1admin"));
     }
 }
