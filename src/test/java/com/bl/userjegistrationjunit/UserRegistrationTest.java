@@ -46,7 +46,7 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void whenGivenEmailAddress_withValidFormat_ShouldReturnTrue() {
+    public void givenEmailAddress_withValidFormat_ShouldReturnTrue() {
         Assert.assertTrue(UserRegistration.checkEmailAddress("pravin1desh@gmail.com"));
     }
 }
